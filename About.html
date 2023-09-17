@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mouse.css">
+    <style>
+        .aboutme{
+            background-color: #d7a4d1;
+            color: black;
+            width: 900px;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .edu-card{
+            margin: auto;
+            background: linear-gradient(to left, #d7a4d1,#9d80cb);
+            color: black;
+            width: 500px;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mouse-tracker"></div>
+    <!-- Navigation -->
+
+    <header>
+        <div>
+            <section class="crd">
+                <div class="content">
+                    <h2>Ashutosh</h2>
+                    <h2>Ashutosh</h2>
+                </div>
+            </section>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div style="height: 30px;"></div>
+    <!-- About Me Section -->
+    <section>
+        <div>
+            <div class="edu-card aboutme" style="width: 70%;">
+
+                <h2>About Me</h2>
+                <p>I am Ashutosh Rai, a computer science student with a passion for problem-solving, a zest for long rides, and an avid hiker. My enthusiasm for designing and deploying applications, coupled with my quick learning abilities, drives my ambition to excel in the tech industry. I am set to graduate in 2024, poised to contribute my skills and dedication to cutting-edge innovations. </p>
+                </div>
+        </div>
+        <div class="aboutme">
+            <!-- <p>
+                I am a highly motivated individual with a passion for learning and achieving excellence in my education and career. Below are my education details and some of my notable achievements:
+            </p> -->
+           
+
+            <!-- Education Details -->
+            <h3>Education</h3>
+
+            <div class="edu-card">
+                <ul>
+                    <li>
+                        <strong>Sarala Birla University, Ranchi</strong><br>
+                        Bachelor of Technology in Computer Science Engineering<br>
+                        Graduated: May 2024
+                    </li>
+                    
+                </ul>    
+            </div>
+            <div class="edu-card">
+                <ul>
+                    <li>
+                        <strong>12th Grade</strong><br>
+                        Completed 12th grade in 2020<br>
+                        School Name: Army Public School , Dipatoli , Ranchi
+                    </li>
+                </ul>
+    
+            </div>
+            <div class="edu-card">
+                <ul>
+                    <li>
+                        <strong>10th Grade</strong><br>
+                        Completed 10th grade in 2017<br>
+                        School Name: Army Public School , Dipatoli , Ranchi
+                    </li>
+                </ul>
+    
+            </div>
+            <!-- Achievements -->
+           
+        </div>
+        <div class="aboutme">
+            <h3>Achievements</h3>
+        <ul style="padding: 20px;">
+            <li>
+                <strong>2nd Rank in Quizinit</strong>
+                <br>
+                Got 2nd place in coding competetion in college 
+            </li>
+            <li>
+                <strong>Academic Excellence Award</strong><br>
+                Awarded for maintaining a consistent GPA of 3.9 throughout my undergraduate studies.
+            </li>
+            <li>
+                <strong>Project Showcase</strong><br>
+                Presented my innovative project at a national tech conference, receiving recognition and positive feedback.
+            </li>
+            <!-- Add more achievements as needed -->
+        </ul>
+        </div>
+    </section>
+</body>
+<script>
+    const tracker = document.getElementById("mouse-tracker");
+
+document.addEventListener("mousemove", (e) => {
+  const trail = document.createElement("div");
+  trail.classList.add("trail");
+  trail.style.left = `${e.pageX}px`;
+  trail.style.top = `${e.pageY}px`;
+  tracker.appendChild(trail);
+
+  setTimeout(() => {
+    trail.style.width = "0px";
+    trail.style.height = "0px";
+    trail.style.opacity = "0";
+    setTimeout(() => {
+      tracker.removeChild(trail);
+    }, 400);
+  }, 10);
+});
+</script>
+</html>

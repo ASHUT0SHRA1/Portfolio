@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Logos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px; /* Adjust the size as needed */
+            height: 300px; /* Adjust the size as needed */
+            border: 2px solid #000;
+            border-radius: 50%;
+            /* overflow: hidden; */
+        }
+
+        .logo {
+            position: absolute;
+            width: 48px; /* Adjust the size as needed */
+            height: 48px; /* Adjust the size as needed */
+            animation: rotate 10s linear infinite;
+            transform-origin: center calc(50% + 150px); /* Adjust the distance as needed */
+        }
+
+        .logo:nth-child(1) {
+            animation-duration: 5s; /* Adjust the rotation speed for each logo */
+        }
+
+        .logo:nth-child(2) {
+            animation-duration: 6s; /* Adjust the rotation speed for each logo */
+        }
+        .logo:nth-child(3) {
+            animation-duration: 7s; /* Adjust the rotation speed for each logo */
+        }
+        .logo:nth-child(4) {
+            animation-duration: 8s; /* Adjust the rotation speed for each logo */
+        }
+        .logo:nth-child(5) {
+            animation-duration: 9s; /* Adjust the rotation speed for each logo */
+        }
+        .logo:nth-child(6) {
+            animation-duration: 10s; /* Adjust the rotation speed for each logo */
+        }
+        /* Add more styles for other logos as needed */
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="logo/icons8-c++-64.png" alt="">
+        <img class="logo" src="logo/icons8-css-logo-48.png" alt="">
+        <img class="logo" src="logo/icons8-flutter-48.png" alt="">
+        <img class="logo" src="logo/icons8-html-5-48.png" alt="">
+        <img class="logo" src="logo/icons8-javascript-48.png" alt="">
+        <img class="logo" src="logo/icons8-php-16.png" alt="">
+        <!-- Add more logo images as needed -->
+    </div>
+</body>
+</html>
